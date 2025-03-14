@@ -1,5 +1,7 @@
 import type { AppProps } from "next/app"
 import { ThemeProvider, createTheme } from "@mui/material/styles"
+import { CartProvider } from "../context/CartContext"
+import "../styles/globals.css"
 
 const theme = createTheme({
   palette: {
@@ -15,7 +17,9 @@ const theme = createTheme({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <CartProvider>
+        <Component {...pageProps} />
+      </CartProvider>
     </ThemeProvider>
   )
 }

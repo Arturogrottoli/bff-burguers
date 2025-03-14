@@ -5,7 +5,6 @@ import ContactSection from "./components/ContactSection"
 import Footer from "./components/Footer"
 import { CartProvider } from "./context/CartContext"
 
-
 export default function App() {
   return (
     <CartProvider>
